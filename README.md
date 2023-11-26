@@ -1,0 +1,2 @@
+# CLI DnD
+This is pretty self explanatory. I'm learning java so I figured no better way to learn some concepts than to make a linear DnD adventure. It's definitely not good, nor is it polished, or optimized, but it works as a proof of concept. Don't crucify me. If you have any recommendations or feedback they are greatly appreciated.
