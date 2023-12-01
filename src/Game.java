@@ -68,19 +68,21 @@ public class Game {
                     }
                 }
             } else if (location.toLowerCase().equals("woods")){
-                System.out.println("You head into the woods and after some walking, you encounter a bandit");
-                Enemy bandit = new Enemy();
+                Enemy e = new Enemy();
+                e.setEnemy();
+                System.out.println("You head into the woods and after some walking, you encounter a " + e.name);
+
                 System.out.println("What would you like to do?\nFight | Run");
                 String choice = in.nextLine();
                 if (choice.toLowerCase().equals("fight")){
-                    while(bandit.health > 0){
-                        System.out.println("What would you like to do this turn? \nAttack | Heal | Flee (can only do on 6 *be careful, there may be consequences*)");
+                    while(e.health > 0){
+                        System.out.println("What would you like to do this turn? \nAttack | Heal | Flee (can only do on 17+ *be careful, there may be consequences*)");
                         String turnChoice = in.nextLine();
 
                         if(turnChoice.toLowerCase().equals("attack")){
                             int playerDamage = r.nextInt(wpnDmg.weaponDamage.get(p1.weapon.toLowerCase())) + 1;
-                            bandit.takeDamage(playerDamage);
-                            System.out.println("You hit the " + bandit.getClass().getName() + " for " + playerDamage + " damage!");
+                            e.takeDamage(playerDamage);
+                            System.out.println("You hit the " + e.name + " for " + playerDamage + " damage!");
                         } else if(turnChoice.toLowerCase().equals("heal")){
                             if(p1.inventory.size() > 0){
                                 System.out.println(p1.inventory);
@@ -97,10 +99,10 @@ public class Game {
                                 continue;
                             }
                         } else if(turnChoice.toLowerCase().equals("flee")){
-                            int fleeRoll = r.nextInt(5) + 1;
+                            int fleeRoll = r.nextInt(19) + 1;
                             System.out.println("Flee roll: " + fleeRoll);
 
-                            if(fleeRoll < 6){
+                            if(fleeRoll < 17){
                                 System.out.println("Flee roll failed! You take 50 damage");
                                 p1.damageTake(50);
                                 System.out.println("Your health: " + p1.health);
@@ -112,11 +114,11 @@ public class Game {
 
 
                         int hit = r.nextInt(5) + 1;
-                        System.out.println("Bandit hit roll: " + hit);
+                        System.out.println(e.name + " hit roll: " + hit);
                         if(hit >= 3){
                             for(int i = 0; i < 4; i++){
                                 int enemyDamage = r.nextInt(5) + 2;
-                                System.out.println("Bandit hits for " + enemyDamage + " damage!");
+                                System.out.println(e.name + " hits for " + enemyDamage + " damage!");
                                 p1.damageTake(enemyDamage);
                             }
                         } else{
@@ -124,7 +126,7 @@ public class Game {
                         }
 
                         System.out.println("Your health: " + p1.health);
-                        System.out.println("Enemy health: " + bandit.health);
+                        System.out.println("Enemy health: " + e.health);
 
                         if(p1.health <= 0){
                             System.out.println("You died. You lost. This shouldn't even be possible this game is as easy as possible.");
