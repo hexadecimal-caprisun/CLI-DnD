@@ -1,3 +1,5 @@
+# Update Log :)
+
 ## 11/30/23 -  Diverse enemies
 
 I added the ability to have different enemies. I haven't added the ability for them to do different damage or anything since I only worked on it for like 10 minutes tonight, but at least now you don't fight the same bandit every time :3 (before it would only spawn a bandit in the little playtest demo debug thingy).
