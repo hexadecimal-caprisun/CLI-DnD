@@ -122,7 +122,7 @@ public class Game {
                                 p1.damageTake(enemyDamage);
                             }
                         } else{
-                            System.out.println("The bandit missed!");
+                            System.out.println("The " + e.name +  " missed!");
                         }
 
                         System.out.println("Your health: " + p1.health);
@@ -138,7 +138,11 @@ public class Game {
                 }
             }
             } else if (location.toLowerCase().equals("tavern")){
-                
+                Tavern tav = new Tavern();
+                tav.setName("Rolling Boil");
+                tav.setMercenary();
+                // System.out.println(tav.name + ": " + tav.merc);
+
             } else{
                 System.out.println("can you not listen to directions?");
                 break;
