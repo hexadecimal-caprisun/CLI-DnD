@@ -2,7 +2,7 @@
 
 This is pretty self explanatory. I'm learning java so I figured no better way to learn some concepts than to make a linear DnD adventure. It's definitely not good, nor is it polished, or optimized, but it works as a proof of concept. Don't crucify me. If you have any recommendations or feedback they are greatly appreciated.
 
-My friend is also making their own! (mine is better trust). Check it out! It's different from mine but I helped them (because they suck), anyway check it out :) [Worse One](https://github.com/howmanyusersaretakn/DNDhttps://github.com/howmanyusersaretakn/DND)
+My friend is also making their own! (mine is better trust). Check it out! It's different from mine but I helped them (because they suck), anyway check it out :) [Worse One](https://github.com/howmanyusersaretakn/DND)
 
 ## To-Do
 
