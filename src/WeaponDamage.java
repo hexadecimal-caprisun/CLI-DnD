@@ -13,6 +13,10 @@ public class WeaponDamage {
         weaponDamage.put("light hammer", 3);
         weaponDamage.put("handaxe", 5);
     }
+
+    WeaponDamage(){
+        setDamage();
+    }
 }   
 
 // Maybe I can set the spell damage here too, if I do spells (we'll see)

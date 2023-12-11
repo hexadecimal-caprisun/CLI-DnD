@@ -13,4 +13,9 @@ public class Tavern {
     public void setMercenary(){
         merc = mercenaries[r.nextInt(mercenaries.length)];
     }
+
+    Tavern(String name){
+        setMercenary();
+        setName(name);
+    }
 }

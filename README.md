@@ -9,7 +9,7 @@ My friend is also making their own! (mine is better trust). Check it out! It's d
 From here in no particular order my priorities are as follows:
 
 - [ ] Variable enemy damage
-- [ ] Create just item shop
+- [X] Create just item shop
 - [ ] (Maybe) Add spells
 - [ ] Stat rolls
 - [ ] Making an actually good game

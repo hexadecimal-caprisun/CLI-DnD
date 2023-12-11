@@ -7,9 +7,6 @@ public class Game {
         Random r = new Random();
         WeaponDamage wpnDmg = new WeaponDamage();
 
-        p1.setInv();
-        wpnDmg.setDamage();
-
         System.out.println("What would you like to be called?");
         p1.name = in.nextLine();
         System.out.println("Welcome to your journey " + p1.name + "!");
@@ -20,8 +17,7 @@ public class Game {
             String location = in.nextLine();
 
             if(location.toLowerCase().equals("shop")){
-                Shop weaponShop = new Shop();
-                weaponShop.setWeapons();
+                Shop weaponShop = new Shop(0);
 
                 System.out.println("You enter the shop...");
 
@@ -69,7 +65,6 @@ public class Game {
                 }
             } else if (location.toLowerCase().equals("woods")){
                 Enemy e = new Enemy();
-                e.setEnemy();
                 System.out.println("You head into the woods and after some walking, you encounter a " + e.name);
 
                 System.out.println("What would you like to do?\nFight | Run");
@@ -138,9 +133,8 @@ public class Game {
                 }
             }
             } else if (location.toLowerCase().equals("tavern")){
-                Tavern tav = new Tavern();
-                tav.setName("Rolling Boil");
-                tav.setMercenary();
+                Tavern tav = new Tavern("Rolling Boil");
+                System.out.println("You have entered " + tav.name);
                 // System.out.println(tav.name + ": " + tav.merc);
 
             } else{

@@ -15,6 +15,10 @@ public class Player {
         inventory.add("Heal");
     }
 
+    Player(){
+        setInv();
+    }
+
     public void damageTake(int n){
         health = health - n;
 

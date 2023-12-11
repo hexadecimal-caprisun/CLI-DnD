@@ -22,4 +22,17 @@ public class Shop {
         return out;
     }
 
+    Shop(int i){
+        if(i == 0){
+            setWeapons();
+        } else if(i == 1){
+            setItems();
+        } else if(i == 2){
+            setWeapons();
+            setItems();
+        }
+
+
+    }
+
 }

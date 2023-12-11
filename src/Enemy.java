@@ -15,4 +15,8 @@ public class Enemy{
     public void takeDamage(int d){
         health -= d;
     }
+
+    Enemy(){
+        setEnemy();
+    }
 }
