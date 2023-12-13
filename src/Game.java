@@ -29,7 +29,7 @@ public class Game {
                 }
             } else if (location.toLowerCase().equals("tavern")){
                 Tavern tav = new Tavern("Rolling Boil");
-                tav.tavernInside();
+                tav.tavernInside(p1);
             } else{
                 System.out.println("can you not listen to directions?");
                 continue;
