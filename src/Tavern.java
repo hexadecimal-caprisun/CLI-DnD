@@ -11,17 +11,14 @@ public class Tavern {
         name = a;
     }
 
-    public void setMercenary(){
-        merc = mercenaries[r.nextInt(mercenaries.length)];
-    }
-
     public void tavernInside(Player p){
         System.out.println("You have entered " + name);
+        Merc m = new Merc(mercenaries[r.nextInt(mercenaries.length)]);
         while(true){
             System.out.println("what would you like to do?\nHire a mercenary | Grab a drink | Rest | Exit");
             String userIn = scan.nextLine();
             if(userIn.toLowerCase().equals("hire a mercenary")){
-                System.out.println("test case merc");
+                System.out.println(m.name);
             } else if(userIn.toLowerCase().equals("grab a drink")){
                 if(p.silver == 0){
                     if(p.gold > 0){
@@ -83,7 +80,6 @@ public class Tavern {
     }
 
     Tavern(String name){
-        setMercenary();
         setName(name);
     }
 }
