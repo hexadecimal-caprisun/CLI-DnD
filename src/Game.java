@@ -14,9 +14,9 @@ public class Game {
             System.out.println("Where would you like to go? \nShop | Woods | Tavern");
             String location = in.nextLine();
             if(location.toLowerCase().equals("shop")){
-                Shop weaponShop = new Shop(0);
+                Shop shop = new Shop(2);
                 System.out.println("You enter the shop...");
-                weaponShop.shopInside(p1);
+                shop.shopInside(p1);
             } else if (location.toLowerCase().equals("woods")){
                 Enemy e = new Enemy();
                 System.out.println("You head into the woods and after some walking, you encounter a " + e.name);

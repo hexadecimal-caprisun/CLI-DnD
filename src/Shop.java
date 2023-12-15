@@ -2,6 +2,8 @@ import java.util.*;
 
 public class Shop {
     HashMap<String, String> goodsPrice = new HashMap<String, String>();
+    WeaponDamage dam = new WeaponDamage();
+    HealingAmount item = new HealingAmount();
     Scanner in = new Scanner(System.in);
 
     public void setWeapons(){
@@ -14,8 +16,8 @@ public class Shop {
         goodsPrice.put("handaxe", "5 gp");
     }
 
-    public void setItems(){ //Add the items for a shop with *NO WEAPONS* just items (i.e. health pots, mana pots, etc.)
-        goodsPrice.put("placeholder", "placeholder");
+    public void setItems(){
+        goodsPrice.put("healing potion", "3 sp");
     }
 
     public String getItem(String s){
@@ -55,10 +57,15 @@ public class Shop {
                                 p1.silver += 10;
                                 if(p1.silver >= Integer.parseInt(cost[0])){
                                     p1.silver -= Integer.parseInt(cost[0]);
-                                    System.out.println("You have bought and equipped a " + purchase + "!");
-                                    System.out.println("You now have " + p1.getMoney());
-                                    p1.updateWeapon(purchase);
-                                    goodsPrice.remove(purchase);
+                                    if(dam.weaponDamage.containsKey(purchase)){
+                                        System.out.println("You have bought and equipped a " + purchase + "!");
+                                        p1.updateWeapon(purchase);
+                                        goodsPrice.remove(purchase);
+                                    } else if(item.healingNum.containsKey(purchase)){
+                                        System.out.println("You have bought a " + purchase + "!\nIt has been added to your inventory?");
+                                        p1.inventory.add(Converter.firstCap(purchase));
+                                        goodsPrice.remove(purchase);
+                                    }
                                     continue;
                                 }
                             }
@@ -66,10 +73,15 @@ public class Shop {
                     } else if (cost[1].equals("gp")){
                         if(p1.gold >= Integer.parseInt(cost[0])){
                             p1.gold -= Integer.parseInt(cost[0]);
-                            System.out.println("You have bought and equipped a " + purchase + "!");
-                            System.out.println("You now have " + p1.getMoney());
-                            p1.updateWeapon(purchase);
-                            goodsPrice.remove(purchase);
+                            if(dam.weaponDamage.containsKey(purchase)){
+                                System.out.println("You have bought and equipped a " + purchase + "!");
+                                p1.updateWeapon(purchase);
+                                goodsPrice.remove(purchase);
+                            } else if(item.healingNum.containsKey(purchase)){
+                                System.out.println("You have bought a" + purchase + "!\n It has been added to your inventory?");
+                                p1.inventory.add(purchase);
+                                goodsPrice.remove(purchase);
+                            }
                             continue;
                         }
                     }

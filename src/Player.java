@@ -8,12 +8,13 @@ public class Player {
     public Integer silver = 0;
     public ArrayList<String> inventory = new ArrayList<>();
     public int[] pStats = new int[6];
+    HealingAmount healNum = new HealingAmount();
 
 
     Random r = new Random();
 
     public void setInv(){
-        inventory.add("Heal");
+        inventory.add("Healing potion");
     }
 
     public void setStats(){
@@ -67,10 +68,10 @@ public class Player {
     }
 
     public void heal(){
-        int temp1 = r.nextInt(3) + 1;
-        int temp2 = r.nextInt(3) + 1;
-        int heal = temp1 + temp2 + 2;
-        health += heal;
-        System.out.println("You healed for " + heal + " hit points, bringing you to " + health);
+        health += 35;
+        if(health > 100){
+            health = 100;
+        }
+        System.out.println("You healed for 35 hit points, bringing you to " + health);
     }
 }

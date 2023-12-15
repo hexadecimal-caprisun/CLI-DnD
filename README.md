@@ -8,8 +8,8 @@ My friend is also making their own! (mine is better trust). Check it out! It's d
 
 From here in no particular order my priorities are as follows:
 
-- [ ] Create just item shop
-- [ ] (Maybe) Add spells
+- [ ] Stat functionality ***(In progress)***
+- [ ] Mercenary functionality ***(In progress)***
 - [ ] Making an actually good game ***(Optional)***
 - [ ] Tavern functionality ***(In progress)***
 
@@ -17,5 +17,6 @@ Here's everything I HAVE managed to tick off the list so far:
 
 - [x] Variable enemy damage
 - [x] Stat rolls 
+- [x] Create just item shop (kinda)
 
 

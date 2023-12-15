@@ -51,7 +51,7 @@ public class Enemy{
                     String invChoice = in.nextLine();
                     if (invChoice.toLowerCase().equals("y")){
                         p1.heal();
-                        p1.updateInv("Heal", 0);
+                        p1.updateInv("Healing potion", 0);
                     } else if(invChoice.toLowerCase().equals("n")){
                         continue;
                     }
