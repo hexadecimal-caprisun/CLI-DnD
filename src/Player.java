@@ -7,6 +7,7 @@ public class Player {
     public Integer gold = 10;
     public Integer silver = 0;
     public ArrayList<String> inventory = new ArrayList<>();
+    public int[] pStats = new int[6];
 
 
     Random r = new Random();
@@ -15,8 +16,15 @@ public class Player {
         inventory.add("Heal");
     }
 
+    public void setStats(){
+        for(int i = 0; i < pStats.length; i++){
+            pStats[i] = r.nextInt(19) + 1;
+        }
+    }
+
     Player(){
         setInv();
+        setStats();
     }
 
     public void damageTake(int n){

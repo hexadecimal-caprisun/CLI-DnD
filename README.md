@@ -8,11 +8,14 @@ My friend is also making their own! (mine is better trust). Check it out! It's d
 
 From here in no particular order my priorities are as follows:
 
-- [ ] Variable enemy damage
 - [ ] Create just item shop
 - [ ] (Maybe) Add spells
-- [ ] Stat rolls
-- [ ] Making an actually good game
-- [ ] Tavern functionality (I lied this is actually first up because it'll mean I finish all basic functionality I need to start expanding cities (if I do that)) ***(In progress)***
-- [ ] Town traversal maybe ???
+- [ ] Making an actually good game ***(Optional)***
+- [ ] Tavern functionality ***(In progress)***
+
+Here's everything I HAVE managed to tick off the list so far:
+
+- [x] Variable enemy damage
+- [x] Stat rolls 
+
 
